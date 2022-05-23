@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/app.css" />
+  </head>
+  <body oncontextmenu="return false">
+    <h1>Minesweeper</h1>
+    <div id="inputs">
+      <label for="board-size">Enter board size</label>
+      <div class="size-input">
+        <input id="board-size" placeholder=" for example: 12" type="text" />
+      </div>
+      <label for="difficulty">difficulty</label>
+      <div class="difficulty-input">
+        <select name="difficulty" id="difficulty" onchange="setDiffiiculty()">
+          <option value="Easy">Easy</option>
+          <option value="Normal">Normal</option>
+          <option value="Hard">Hard</option>
+        </select>
+      </div>
+      <button class="btn-controller" onclick="start(false)">start</button>
+    </div>
+    <table></table>
+    <button id="restart" class="btn-controller restart" onclick="start(true)">
+      restart
+    </button>
+    <button id="menu" class="btn-controller menu" onclick="menu()">menu</button>
+    <script src="JS/app.js"></script>
+  </body>
+</html>
